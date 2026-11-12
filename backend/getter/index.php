@@ -11,4 +11,5 @@
  */
 
 require_once __DIR__ . '/_globals.php';
+require_once __DIR__ . '/_photographicproject.php';
 // require_once __DIR__ . '/_getter.php';

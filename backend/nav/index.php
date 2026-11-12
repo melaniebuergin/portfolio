@@ -9,6 +9,8 @@
 
 add_filter('init', function () {
     register_nav_menus([
+        'main' => 'Hauptnavigation',
+        'footer' => 'Fussnavigation',
         // todo: Menus hier registrieren
     ]);
 });

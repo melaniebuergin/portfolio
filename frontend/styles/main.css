@@ -4,8 +4,9 @@
 /* Definition of base styles. */
 :root {
     /* colors */
-    --color-white: #ffffff;
-    --color-black: #000000;
+    --color-white: #F9F9F7;
+    --color-black: #222222;
+    --color-gray: #CBCBCB;
     --color-accent: #ff0000;
     /* gaps & sizes */
     --gap-around: 40px;
@@ -13,23 +14,103 @@
     --font-h1: normal 64px/120% serif;
 }
 
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Styling of all available layout components. */
 [data-layout="header"] {
     padding: var(--gap-around);
-    background-color: var(--color-accent);
     position: sticky;
     top: 0;
     z-index: 100;
+    background-color: var(--color-white);
+    
+    width:100vw;
+    height: 5vh;
+    margin: 0;
+    padding:0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+    .nav-container {
+        .nav {        
+        border-bottom: 0.8px solid var(--color-black);
+        width: 90vw;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+        
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                line-height: 3;
+                color: var(--color-black);
+                font-family: "Inter", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 300;
+                font-style: normal;
+            }
+
+        }
+    }
 }
 [data-layout="footer"] {
-    padding: var(--gap-around);
-    background-color: var(--color-accent);
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+    .nav-container {
+        .nav {        
+        border-top: 0.8px solid var(--color-black);
+        width: 90vw;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+        
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                line-height: 3;
+                color: var(--color-black);
+                font-family: "Inter", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 300;
+                font-style: normal;
+            }
+
+        }
+    }
 }
 
 /* Styling of all available page components. */
 [data-page] {
     width: 100%;
     height: 100%;
+}
+
+/* Styling photo Projekt Page */
+[data-page="photo"] {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
 }
 
 /* Styling of all available module components. */
