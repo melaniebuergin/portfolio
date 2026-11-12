@@ -6,6 +6,23 @@ $photographicproject = get_photographicproject_by_id( get_the_ID() );
 
     <h1><?= esc_html( $photographicproject['title'] ); ?></h1>
 
+    <?php if ( ! empty( $photographicproject['production_date'] ) ) : ?>
+        <p class="production-date">
+            <?= esc_html( $photographicproject['production_date'] ); ?>
+        </p>
+    <?php endif; ?>
+
+    <?php if ( ! empty( $photographicproject['lead_text'] ) ) : ?>
+        <div class="lead-text">
+            <?= esc_html( $photographicproject['lead_text'] ); ?>
+        </div>
+    <?php endif; ?>
+
+    <!-- Beschreibung -->
+    <div class="text">
+        <?= wpautop( esc_html( $photographicproject['text'] ) ); ?>
+    </div>
+
     <?php if ( ! empty( $photographicproject['image'] ) ) : ?>
         <?php
         $image_id = $photographicproject['image'];
@@ -15,9 +32,7 @@ $photographicproject = get_photographicproject_by_id( get_the_ID() );
         <img src="<?= esc_url( $image_url ); ?>" alt="<?= esc_attr( $image_alt ); ?>">
     <?php endif; ?>
 
-    <div class="text">
-        <?= wpautop( esc_html( $photographicproject['text'] ) ); ?>
-    </div>
+    
 
     <!-- Media Gallery -->
     <?php if ( ! empty( $photographicproject['gallery'] ) ) : ?>
